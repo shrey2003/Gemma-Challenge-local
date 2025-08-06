@@ -1,0 +1,28 @@
+# Create test_requirements.txt with all necessary testing dependencies
+test_requirements = """# Core testing libraries
+pytest>=7.0.0
+pytest-asyncio>=0.21.0
+pytest-mock>=3.10.0
+pytest-cov>=4.1.0  # For coverage reports
+
+# Web testing
+pytest-flask>=1.2.0  # For Flask app testing
+
+# Mocking and fixtures
+responses>=0.23.0  # For mocking HTTP requests
+factory-boy>=3.3.0  # For creating test data
+
+# API testing
+httpx>=0.24.0  # For async HTTP client
+pytest-httpx>=0.21.0  # For mocking HTTP requests in async code
+
+# Utilities
+freezegun>=1.2.0  # For time/date mocking
+pytest-xdist>=3.3.0  # For parallel test execution
+"""
+
+# Write the file
+with open('test_requirements.txt', 'w') as f:
+    f.write(test_requirements)
+
+print("test_requirements.txt created successfully")
